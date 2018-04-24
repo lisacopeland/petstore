@@ -6,24 +6,45 @@
   bottom: 0;
   left: 0;
   right: 0;
-  overflow-y: scroll;
 }
 
 .header {
   display: flex;
-  background-color: #262626;
+  background-color: #3372cd;
   color: white;
+  height: 150px;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 25px;
+  align-content: center;
   padding-bottom: 25px;
 }
 
 .products {
+  background-color: #2f374c;
   padding-left: 25px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
+  overflow-y: scroll;
+}
+
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  height: 50px;
+  background-color: #3372cd;
+  color: white;
+  justify-content: flex-end;
+}
+
+.footer a {
+  align-self: center;
+  padding-right: 16px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .product {
@@ -31,9 +52,11 @@
   flex-direction: row;
   margin: 30px;
   padding: 16px;
-  width: 600px;
-  border: 1px solid #262626;
-  box-shadow: 5px 10px #888888;
+  width: 300px;
+  background-color:#414b64;
+  color: white;
+  /* border: 1px solid #262626;
+  box-shadow: 5px 10px #888888; */
   border-radius: 10px;
 }
 
@@ -45,7 +68,9 @@
 }
 
 .snipcart-add-item {
-  width: 150px;
-  background-color: blue;
-  color: white;
+  width: 100px;
+  background-color: #cb017c;
+  border: none;
+  border-radius: 7px;
+  color: #e6e6e6
 }

@@ -5,6 +5,10 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 
+class ResponseArray {
+  result: any[];
+}
+
 @Injectable()
 export class ProductService {
 
@@ -15,15 +19,15 @@ export class ProductService {
   getProducts() {
 
     const query = encodeURIComponent(
-      '*[_type == \'product\']{ name, _id, description, price, \'imageUrl\': image.asset->url }'
+      '*[_type == \'product\'] | order(name) { name, _id, description, price, \'imageUrl\': image.asset->url }'
     );
 
     const URI = `https://q7245wim.apicdn.sanity.io/v1/data/query/pets?query=${query}`;
 
     return this.http
-      .get(URI)
+      .get<ResponseArray>(URI)
       .map(data => {
-        console.log(data);
+        console.log(JSON.stringify(data));
         this.products = data['result'];
         return this.products;
       })
