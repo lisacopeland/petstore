@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { ProductService } from './product.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { ProductService } from './product.service';
 export class AppComponent implements OnInit {
   title = 'app';
   products = [];
+  faCoffee = faCoffee;
 
   constructor(private productService: ProductService) { }
 
