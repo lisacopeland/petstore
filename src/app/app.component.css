@@ -10,20 +10,31 @@
 
 .header {
   display: flex;
-  background-color: #3372cd;
-  color: white;
-  height: 150px;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  padding-bottom: 25px;
+  background-color: #272324;
+  height: 100px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-text {
+  font-family: Roboto;
+  font-size: 22px;
+  border: 1px solid white;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+  margin-left: 24px;
 }
 
 .products {
-  background-color: #2f374c;
-  padding-left: 25px;
+  background-color: #eff3f6;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
   overflow-y: scroll;
@@ -33,18 +44,31 @@
   display: flex;
   flex-shrink: 0;
   flex-direction: row;
-  height: 50px;
-  background-color: #3372cd;
-  color: white;
   justify-content: flex-end;
+  align-items: center;
+  height: 75px;
+  background-color: #272324;
+  color: white;
 }
 
-.footer a {
-  align-self: center;
-  padding-right: 16px;
+.social-icon {
   color: white;
+  margin: 0px 10px 0px 10px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.signature {
+  margin: 0px 20px 0px 20px;
+  color: white;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
 }
 
 .product {
@@ -54,10 +78,9 @@
   padding: 16px;
   width: 300px;
   background-color:#414b64;
+  box-shadow: 6px 6px 28px 0px rgba(0,0,0,0.75);
   color: white;
-  /* border: 1px solid #262626;
-  box-shadow: 5px 10px #888888; */
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .product-text {
@@ -65,12 +88,36 @@
   flex-direction: column;
   padding-left: 16px;
   justify-content: space-between;
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 14px;
 }
 
 .snipcart-add-item {
-  width: 100px;
-  background-color: #cb017c;
+  width: 115px;
+  background-color: #fba11a;
   border: none;
   border-radius: 7px;
-  color: #e6e6e6
+  color: black;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
