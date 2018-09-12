@@ -4,10 +4,6 @@ import { Injectable } from '@angular/core';
 import { throwError as observableThrowError, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-// import 'rxjs/add/operator/map';
-// import 'rxjs/add/operator/catch';
-// import 'rxjs/add/observable/throw';
-
 class ResponseArray {
   result: any[];
 }

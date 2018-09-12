@@ -1,0 +1,11 @@
+<div mat-dialog-title>
+    About
+</div>
+<mat-dialog-content>
+This content is about {{ data.name }}
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>No</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true">Yes</button>
+  </mat-dialog-actions>
