@@ -1,3 +1,4 @@
+
 .about-dialog {
   display: flex;
   flex-direction: column;
@@ -28,4 +29,19 @@
 .about-content {
   flex-wrap: wrap;
   text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-dialog {
+    font-size: 14px;
+  }
+
+  .about-content {
+    padding-top: 20px;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
 }

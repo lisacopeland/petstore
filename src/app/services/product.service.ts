@@ -30,9 +30,7 @@ export class ProductService {
 
     return this.http.get<ResponseArray>(URI).pipe(
       map(data => {
-        console.log(JSON.stringify(data));
         this.products = this.translateProducts(data['result']);
-        // this.products = data['result'];
         return this.products;
       }),
       catchError((error: HttpErrorResponse) => {
