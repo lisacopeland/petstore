@@ -1,4 +1,4 @@
-This is an Angular 5 demo app featuring Snipcart and uses Sanity as a headless server. 
+This is an Angular 6 demo app featuring Snipcart and uses Sanity as a headless server. 
 
 For more information about snipcart, go to https://snipcart.com
 
