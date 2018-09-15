@@ -1,43 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- App component template -->
 <div class="container">
-
-  <div class="header">
-    <div class="header-text">
-      Lisa's Pet Store!
-    </div>
+  <app-header></app-header>
+  <div class="content">
+  <router-outlet></router-outlet>
   </div>
-
-  <div class="products">
-      <div *ngFor="let product of products">
-        <div class="product">
-            <!-- <img src="{{ product.imageUrl }}?h=200" height="200"/> -->
-          <img src="{{ product.imageUrl }}" height="200"/>
-          <div class="product-text">
-            <div>
-            <h4 class="product-name">{{ product.name }}</h4>
-            <p class="product-description">{{ product.description }}</p>
-          </div>
-          <div>
-            <button class="snipcart-add-item"
-                attr.data-item-name="{{ product.name }}"
-                attr.data-item-id="{{ product._id }}"
-                attr.data-item-image="{{ product.imageUrl }}"
-                attr.data-item-price="{{ product.price }}"
-                attr.data-item-description="{{ product.description }}"
-                data-item-url='https://wt-4b2a879e3bb5c630d65bc12c99321764-0.run.webtask.io/sanity-parser'>
-                Buy Now For Only {{ product.price | currency }}
-            </button>
-          </div>
-          </div>
-        </div>
-      </div>
-  </div> <!-- End of products -->
-
-  <div class="footer">
-    <a href="https://www.w3schools.com" class="social-icon">
-        <fa-icon [icon]="githubIcon"></fa-icon>
-    </a>
-    <div class="signature">Website by Lisa Copeland<sup style="font-size:12px;">TM</sup></div>
-  </div>
+  <app-footer></app-footer>
 </div>
-

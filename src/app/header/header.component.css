@@ -1,0 +1,58 @@
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #272324;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.header-text {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+  margin-left: 24px;
+}
+
+.about-button {
+  width: 100px;
+  height: 50px;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #131720;
+  border-radius: 15px;
+  background-color: #fba11a;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.33);
+  margin-right: 24px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .header {
+      height: 50px;
+  }
+
+  .header-text {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+  .about-button {
+    width: 65px;
+    height: 35px;
+    font-size: 12px;
+  }
+}

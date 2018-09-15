@@ -1,0 +1,74 @@
+
+.product {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  padding: 16px;
+  width: 300px;
+  height: 200px;
+  background-color:#414b64;
+  box-shadow: 6px 6px 28px 0px rgba(0,0,0,0.75);
+  color: white;
+  border-radius: 7px;
+}
+
+img {
+  height: 200px;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  justify-content: space-between;
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 14px;
+}
+
+.snipcart-add-item {
+  width: 115px;
+  background-color: #fba11a;
+  border: none;
+  border-radius: 7px;
+  color: black;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .product {
+    margin: 10px 5px;
+    padding: 5px;
+    width: 275px;
+    background-color:#414b64;
+    box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.75);
+    color: white;
+    border-radius: 7px;
+  }
+
+  .snipcart-add-item {
+    width: 100px;
+    font-size: 12px;
+  }
+}

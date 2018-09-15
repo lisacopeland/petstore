@@ -1,0 +1,24 @@
+<!-- Template for the about dialog component -->
+<div class="about-dialog">
+  <div class="about-header" mat-dialog-title>
+    <div>
+      About Petstore
+    </div>
+    <button class="cancel-icon" [mat-dialog-close]>
+      <fa-icon [icon]="cancelIcon"></fa-icon>
+    </button>
+  </div>
+
+  <mat-dialog-content class="about-content">
+    <p>
+      This is a web application demonstrating the use of Sanity.io, a headless database, and Snipcart, an ecommerce package for
+      javascript. It is written in Angular 6, and uses Angular Material elements and Font Awesome Icons.
+    </p>
+    <p>
+      This app has been lovingly crafted by {{ data.name }}
+    </p>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+  </mat-dialog-actions>
+</div>

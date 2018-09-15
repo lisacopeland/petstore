@@ -1,17 +1,20 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { throwError as observableThrowError, Observable } from 'rxjs';
+import { throwError as observableThrowError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-
-// import 'rxjs/add/operator/map';
-// import 'rxjs/add/operator/catch';
-// import 'rxjs/add/observable/throw';
+import { Product } from '../models/product.model';
 
 class ResponseArray {
   result: any[];
 }
 
+/**
+ * Service which retrieves the records from Sanity.io
+ *
+ * @export
+ * @class ProductService
+ */
 @Injectable()
 export class ProductService {
   products: object[];
@@ -27,14 +30,17 @@ export class ProductService {
 
     return this.http.get<ResponseArray>(URI).pipe(
       map(data => {
-        console.log(JSON.stringify(data));
-        this.products = data['result'];
+        this.products = this.translateProducts(data['result']);
         return this.products;
       }),
       catchError((error: HttpErrorResponse) => {
         console.log(error);
-        return Observable.throw(error);
+        return observableThrowError(error);
       })
     );
+  }
+
+  translateProducts(responseArray: any[]) {
+    return responseArray.map(x => Product.productTranslate(x));
   }
 }

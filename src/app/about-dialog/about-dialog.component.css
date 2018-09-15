@@ -1,0 +1,47 @@
+
+.about-dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.cancel-icon {
+  color: black;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.about-content {
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-dialog {
+    font-size: 14px;
+  }
+
+  .about-content {
+    padding-top: 20px;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
+}
